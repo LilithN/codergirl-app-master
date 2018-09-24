@@ -193,20 +193,23 @@ const videos = [
       }
     ]
   }
- ] ;
+];
 
- @Component({
+@Component({
   selector: 'cg-video-list',
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.css']
 })
 export class VideoListComponent implements OnInit {
 
+  selectedVideoId: string | undefined;
   videoList = videos;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  pickVideo(video: any) {
+    this.selectedVideoId = 'videos.id';
+  }
 }

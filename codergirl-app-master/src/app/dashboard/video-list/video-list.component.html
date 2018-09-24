@@ -3,5 +3,6 @@
 </p>
 
 <ul>
-  <li *ngFor="let videos of videoList">{{ videos.title }} by {{ videos.author }}. Date: {{videos.date | date: 'medium'}}</li>
+  <li *ngFor="let videos of videoList" [class.selected]="videos.id === selectedVideoId" (click)="pickVideo(video)">
+  {{ videos.title }} by {{ videos.author }}, Date: {{videos.date | date: 'mediumDate'}}</li>
 </ul>
