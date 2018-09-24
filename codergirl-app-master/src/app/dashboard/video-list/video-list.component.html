@@ -3,5 +3,5 @@
 </p>
 
 <ul>
-  <li *ngFor="let videos of videoList">{{ videos.title }} by {{ videos.author }}</li>
+  <li *ngFor="let videos of videoList">{{ videos.title }} by {{ videos.author }}. Date: {{videos.date | date: 'medium'}}</li>
 </ul>
