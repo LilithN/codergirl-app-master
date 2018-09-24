@@ -7,7 +7,7 @@ const videos = [
     'title': 'Angular Observable Data Flow',
     'author': 'Kyle Cordes',
     'id': 'JPuqluYYa-o',
-    'date': '11/0Div3/2015',
+    'date': '11/03/2015',
     'viewDetails': [
       {
         'age': 17,
