@@ -1,0 +1,13 @@
+div {
+  background-color: black;
+  max-width: 70%;
+  border-color: darkblue;
+  border-style: groove;
+  border-width: 10px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+}
