@@ -1,13 +1,13 @@
 div {
-  background-color: black;
+  background-color: #1c647e;
   max-width: 70%;
-  border-color: darkblue;
+  border-color: #227ca2;
   border-style: groove;
-  border-width: 10px;
+  border-width: 3px;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
