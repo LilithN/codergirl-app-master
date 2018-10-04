@@ -4,7 +4,8 @@
 </p>
 
 <ul>
-  <li *ngFor="let videos of videos" [class.selected]="videos.id === selectedVideoId" (click)="pickVideo(video)">
-  {{ videos.title }} by {{ videos.author }}, Date: {{videos.date | date: 'mediumDate'}}</li>
+  <li *ngFor="let video of videos" [class.selected]="video.id === selectedVideoId" (click)="pickVideo(video)">
+  {{ video.title }} by {{ video.author }} {{video.date | date: 'mediumDate'}}</li>
+
 </ul>
 </div>

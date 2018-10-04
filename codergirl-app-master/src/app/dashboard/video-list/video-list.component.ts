@@ -24,6 +24,6 @@ export class VideoListComponent implements OnInit {
   ngOnInit() {
   }
   pickVideo(video: any) {
-    this.selectedVideoId = 'video.id';
+    this.selectedVideoId = video.id;
   }
 }
