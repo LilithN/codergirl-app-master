@@ -1,15 +1,33 @@
 div {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  margin-top: 5%;
+  justify-content: space-between;
+  margin-top: 1%;
 }
 
+nav {
+  background-color: #333333;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   text-align: center;
+  font-size: 2em;
   text-decoration: underline;
-  text-decoration-color: #55accf;
+  text-decoration-color: #227ca2;
+}
+
+.cgVideoPlayer {
+  width: 45%;
+}
+
+.cgVideoList {
+  width: 25%;
+}
+
+.cgStatFilters {
+  width: 25%;
 }
