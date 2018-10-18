@@ -14,11 +14,21 @@ h2 {
   color: #ffffff;
   text-align: center;
 }
+
+li::marker {
+  color: red;
+  width: 6em;
+  text-align: center;
+  }
+
 li {
   font-family: 'Montserrat', sans-serif;
-  color: #d9d9d9;
-  list-style-type: none;
+  /*color: #d9d9d9;*/
+  /*list-style-type: square;*/
+  display: list-item;
 }
+
+
 
 li:hover {
   cursor: pointer;
@@ -26,7 +36,7 @@ li:hover {
   text-decoration: underline;
 }
 
-ul li::before {
+/*ul li::before {
   content: "\2022";
   color: #1c647e;
   font-weight: bold;
@@ -34,4 +44,5 @@ ul li::before {
   width: 1em;
   font-size: 2em;
   margin-left: -0.5em;
-}
+}*/
+

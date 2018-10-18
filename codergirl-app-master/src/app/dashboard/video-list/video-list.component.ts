@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-const API_URL = 'https://api.angularbootcamp.com';
-
+import { Videos, VideoDataService } from '../../video-data.service';
 
 
 @Component({
@@ -10,15 +9,14 @@ const API_URL = 'https://api.angularbootcamp.com';
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.css']
 })
+
 export class VideoListComponent implements OnInit {
 
   selectedVideoId: string | undefined;
-  videos = [];
+  videos: Observable<Videos[]>;
 
-  constructor(http: HttpClient) {
-    http
-    .get<any>(API_URL + '/videos')
-    .subscribe(videos => this.videos = videos);
+  constructor(svc: VideoDataService) {
+    this.videos = svc.loadVideos();
    }
 
   ngOnInit() {

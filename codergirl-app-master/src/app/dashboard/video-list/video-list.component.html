@@ -4,7 +4,7 @@
 </h2>
 
 <ul>
-  <li *ngFor="let video of videos" [class.selected]="video.id === selectedVideoId" (click)="pickVideo(video)">
+  <li *ngFor="let video of videos | async" [class.selected]="video.id === selectedVideoId" (click)="pickVideo(video)">
   {{ video.title }} by {{ video.author }} {{video.date | date: 'mediumDate'}}</li>
 
 </ul>
