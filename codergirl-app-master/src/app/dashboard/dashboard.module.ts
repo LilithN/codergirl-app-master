@@ -8,6 +8,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { StatFiltersComponent } from './stat-filters/stat-filters.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,4 +17,7 @@ import { StatFiltersComponent } from './stat-filters/stat-filters.component';
   ],
   declarations: [VideoDashboardComponent, VideoListComponent, VideoPlayerComponent, StatFiltersComponent]
 })
-export class DashboardModule { }
+export class DashboardModule {
+
+
+ }

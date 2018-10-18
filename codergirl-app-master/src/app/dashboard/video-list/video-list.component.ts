@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, Input } from '@angular/core';
+import { Videos } from '../../video-data.service';
 
-import { Videos, VideoDataService } from '../../video-data.service';
 
 
 @Component({
@@ -10,18 +9,12 @@ import { Videos, VideoDataService } from '../../video-data.service';
   styleUrls: ['./video-list.component.css']
 })
 
-export class VideoListComponent implements OnInit {
+export class VideoListComponent  {
+  @Input() videos: Videos[];
 
   selectedVideoId: string | undefined;
-  videos: Observable<Videos[]>;
 
-  constructor(svc: VideoDataService) {
-    this.videos = svc.loadVideos();
-   }
-
-  ngOnInit() {
-  }
-  pickVideo(video: any) {
-    this.selectedVideoId = video.id;
+  pickVideo(videos: any) {
+    this.selectedVideoId = videos.id;
   }
 }
