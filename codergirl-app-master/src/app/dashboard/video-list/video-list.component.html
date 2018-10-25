@@ -5,7 +5,16 @@
 
 <ul>
   <li *ngFor="let video of videos | async" [class.selected]="video.id === selectedVideoId" (click)="pickVideo(video)">
-  {{ video.title }} by {{ video.author }} {{video.date | date: 'mediumDate'}}</li>
+    <cg-video-list-item [v]="videos"></cg-video-list-item>
+  </li>
+
 
 </ul>
 </div>
+
+
+
+
+
+
+

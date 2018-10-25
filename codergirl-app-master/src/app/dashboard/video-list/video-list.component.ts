@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Videos } from '../../video-data.service';
+import { VideoListItemComponent } from './video-list-item/video-list-item.component';
 
 
 
