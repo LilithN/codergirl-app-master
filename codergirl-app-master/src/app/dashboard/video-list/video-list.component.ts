@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Videos } from '../../video-data.service';
+import { Observable } from 'rxjs';
 import { VideoListItemComponent } from './video-list-item/video-list-item.component';
 
 
@@ -11,7 +12,7 @@ import { VideoListItemComponent } from './video-list-item/video-list-item.compon
 })
 
 export class VideoListComponent  {
-  @Input() videos: Videos[];
+  @Input() videoList: Observable<Videos[]>;
 
   selectedVideoId: string | undefined;
 

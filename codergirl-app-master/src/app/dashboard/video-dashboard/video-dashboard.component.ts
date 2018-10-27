@@ -10,10 +10,10 @@ import { Videos, VideoDataService } from '../../video-data.service';
 export class VideoDashboardComponent  {
 
 
-  videoList: Observable<Videos[]>;
+  videos: Observable<Videos[]>;
 
   constructor(svc: VideoDataService) {
-    this.videoList = svc.loadVideos();
+    this.videos = svc.loadVideos();
 
 
 

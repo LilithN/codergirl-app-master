@@ -4,7 +4,7 @@
 </h2>
 
 <ul>
-  <li *ngFor="let video of videos | async" [class.selected]="video.id === selectedVideoId" (click)="pickVideo(video)">
+  <li *ngFor="let videos of videoList | async" [class.selected]="videos.id === selectedVideoId" (click)="pickVideo(videos)">
     <cg-video-list-item [v]="videos"></cg-video-list-item>
   </li>
 
