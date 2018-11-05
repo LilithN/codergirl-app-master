@@ -9,13 +9,14 @@ import { Videos, VideoDataService } from '../../video-data.service';
 })
 export class VideoDashboardComponent  {
 
-
-  videos: Observable<Videos[]>;
+ videos: Observable<Videos[]>;
+  currentVideo: Videos;
 
   constructor(svc: VideoDataService) {
     this.videos = svc.loadVideos();
-
-
-
 }
+setSelected(video: Videos) {
+  this.currentVideo = video;
+}
+
 }
