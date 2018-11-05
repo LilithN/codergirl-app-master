@@ -17,6 +17,7 @@ export class VideoListComponent  {
   selectedVideoId: string | undefined;
 
   pickVideo(videos: any) {
+    this.chooseVideo.emit(videos);
     this.selectedVideoId = videos.id;
   }
 }

@@ -16,6 +16,7 @@ export class VideoDashboardComponent  {
     this.videos = svc.loadVideos();
 }
 setSelected(video: Videos) {
+  console.log('we got the video', video);
   this.currentVideo = video;
 }
 
