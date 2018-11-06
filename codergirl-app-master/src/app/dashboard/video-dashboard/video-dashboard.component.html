@@ -4,6 +4,6 @@
 
 <div>
 <cg-video-list [videoList]="videos | async" class="cgVideoList" (chooseVideo)="setSelected($event)"></cg-video-list>
-<cg-video-player class="cgVideoPlayer"></cg-video-player>
+<cg-video-player [video]="currentVideo" class="cgVideoPlayer"></cg-video-player>
 <cg-stat-filters class="cgStatFilters"></cg-stat-filters>
 </div>
