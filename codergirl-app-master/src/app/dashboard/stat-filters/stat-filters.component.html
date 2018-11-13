@@ -8,31 +8,46 @@
 
 
 <form [formGroup]="details" (ngSubmit)="saveStatDetails()">
+
+<div class="container">
 <label for="firstName">First Name</label>
 <input id="firstName" type="text" formControlName="firstName">
-<div *ngIf="details.get('firstName')?.hasError('required') && details.get('firstName')?.touched">Please enter first name</div>
+<div class="error" *ngIf="details.get('firstName')?.hasError('required') && details.get('firstName')?.touched">Please enter first name</div>
+</div>
 
-
+<div class="container">
 <label for="lastName">Last Name</label>
 <input id="lastName" type="text" formControlName="lastName">
-<div *ngIf="details.get('lastName')?.hasError('required') && details.get('lastName')?.touched">Please enter last name</div>
+<div class="error" *ngIf="details.get('lastName')?.hasError('required') && details.get('lastName')?.touched">Please enter last name</div>
+</div>
 
+<div class="container">
 <label for="middleInitial">Middle Initial</label>
 <input id="middleInitial" type="text" formControlName="middleInitial">
-<div *ngIf="details.get('middleInitial')?.hasError('maxLength') && details.get('middleInitial')?.touched">Only 1 character please</div>
+<div class="error" *ngIf="details.get('middleInitial')?.hasError('maxLength') && details.get('middleInitial')?.touched">Only 1 character please</div>
+</div>
 
+<div class="container">
 <label for="favoriteMovie">Favorite Movie</label>
 <input id="favoriteMovie" type="text" formControlName="favoriteMovie">
-<div *ngIf="details.get('favoriteMovie')?.hasError('minLength') && details.get('favoriteMovie')?.touched">Name of movie is too short</div>
+<div class="error" *ngIf="details.get('favoriteMovie')?.hasError('minLength') && details.get('favoriteMovie')?.touched">Name of movie is too short</div>
+</div>
 
+<div class="container">
 <label for="favoriteColor">Favorite Color</label>
 <input id="favoriteColor" type="text" formControlName="favoriteColor">
-<div *ngIf="details.get('favoriteColor')?.hasError('minLength') && details.get('favoriteColor')?.touched">Name of color is too short</div>
+<div class="error" *ngIf="details.get('favoriteColor')?.hasError('minLength') && details.get('favoriteColor')?.touched">Name of color is too short</div>
+</div>
 
+<div class="container">
 <label for="fakePhoneNumber">Fake Phone Number</label>
 <input id="phone" type="tel" formControlName="fakePhoneNumber" [class.invalid]="details.get('fakePhoneNumber')?.invalid">
+</div>
 
-<button class="btn" [disabled]="!details.valid" [class.disabled]="!details.valid">Input</button>
+<div id="btn">
+<button [disabled]="!details.valid" [class.disabled]="!details.valid">Input</button>
+</div>
+
 </form>
 
 
